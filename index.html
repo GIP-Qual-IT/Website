@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/responisve.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <title>Qual-IT</title>
+</head>
+<body>
+<header>
+ <nav>
+    <div class="navbar">
+            <img class="logo" src="images/b6a006d7-1e42-46c8-81e7-bc8e0995e23d-removebg-preview.png" alt="logo">
+        <ul id="links" class="nav-links"> 
+            <li><a href="#">Home</a></li>
+            <li><a id="navlink1" href="#">Producten</a></li>
+            <li><a id="navlink2" href="#">Over Ons</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="dropdown">
+            <button id="navlink3" class="dropbtn">
+                <img class="vlag" src="https://imgur.com/U0JJlm2.png" alt="nationale vlag">
+            </button>
+            <div class="dropdown-content">
+                <img id="nederlands" src="https://imgur.com/U0JJlm2.png" alt="Belgische vlag" onclick="changeLanguage('nederlands')">
+                <img id="engels" src="https://imgur.com/v6pv9P6.png" alt="Engelse vlag" onclick="changeLanguage('engels')">
+                <img id="frans" src="https://imgur.com/uuaeee4.png" alt="Franse vlag" onclick="changeLanguage('frans')">
+            </div>
+        </div>
+        <img class="menu-logo" src="https://imgur.com/1iPwhVv.jpg" alt="menu-icon" onclick="menutoggle()">
+    </div> 
+ </nav>
+</header>
+
+<main>
+<div class="Slidedowncontainer"></div>
+    <section class="korte-inleiding">
+        <div class="title">
+        <h1>Qual-IT</h1>
+        </div> 
+        <div class="eerste-tekst">
+        <h2 id="title">Welkom bij Qual-IT</h2>
+        <p id="vertaling">Bij Qual-IT begrijpen we dat de digitale wereld voortdurend evolueert, en dat je als ondernemer op zoek bent naar een webpartner die je
+            visie tot leven kan brengen. Ons team van gepassioneerde experts staat klaar om je te helpen bij elke stap van het proces, 
+            van concept tot creatie, en verder naar groei.</p>
+            <a id="knop" class="button" href="#">Ontdek</a>
+        </div>
+        <img class="afb-alinea1" src="https://i.imgur.com/w1vN0ys.png" alt="">
+  </section>  
+</div>
+
+
+<section class="personeel">
+        <div class="personeels-leden">
+        <img src="https://i.imgur.com/f4CzQtY.png" alt="" class="icoontje">
+        <h2>webontwikkelaar</h2>
+        <h3>Jef Vanbrabant</h3>
+        <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ratione at natus, assumenda excepturi ex voluptatem totam vero inventore nam.</h4>
+    </div>
+    <div class="personeels-leden">
+        <img src="https://i.imgur.com/f4CzQtY.png" alt="" class="icoontje">
+        <h2>CEO</h2>
+        <h3>Yessin Messaoud</h3>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vitae, minus aliquam eligendi tenetur id exercitationem ut pariatur distinctio porro?</h4>
+    </div>
+    <div class="personeels-leden">
+        <img src="https://i.imgur.com/f4CzQtY.png" alt="" class="icoontje">
+        <h2>server-side ontwikkelaar</h2>
+        <h3>Arne Van der Herten</h3>
+        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, doloribus maiores? Iste natus obcaecati, distinctio dolores officiis unde repudiandae nostrum!</h4>
+    </div>
+</section>
+
+<section class="extra-info">
+    <div class="info-home">
+        <h2>Qual-IT: Maatwerk Websites voor Jou</h2>
+        <p>Qual-IT is jouw partner voor op maat gemaakte websites.
+           Ons team van experts begrijpt jouw behoeften en creëert websites
+           die jouw bedrijf perfect vertegenwoordigen. Van concept tot lancering,
+           we zorgen voor een naadloze samenwerking en klanttevredenheid,
+           wat resulteert in een unieke online aanwezigheid.
+           Kies Qual-IT voor onderscheidend webdesign en hoogwaardige ontwikkeling.</p>
+    </div>
+    <img class="schermen" src="https://i.imgur.com/hrNwwTw.png" alt="">
+</section>
+
+</main>
+
+
+<footer>
+        <div class="footer-inhoud">
+            <div class="footer-1">
+                <h3>Qual-IT</h3>
+                    <p>Diestestraat 163</p>
+                    <p>3000 Leuven</p>
+                    <a target="_blank" href="https://www.google.com/maps/place/Miniemeninstituut/@50.8814123,4.7067479,17z/data=!4m14!1m7!3m6!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!2sMiniemeninstituut!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c!3m5!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c?entry=ttu">routebeschrijving</a>
+            </div>
+            <div class="footer-2">
+                <h3>Op maat</h3>
+                    <p>Speciaal voor jouw</p>
+            </div>
+            <div class="footer-3">
+                <p><span class="hoofdletter">ONTDEK MEER</p>
+                <a target="_blank" href="https://www.facebook.com/?locale=nl_NL"><i class="bi bi-facebook"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/login/nl"><i class="bi bi-linkedin"></i></a>
+                <a target="_blank" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+</footer>
+
+ 
+</body>
+</html>

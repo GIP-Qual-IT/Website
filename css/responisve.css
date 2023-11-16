@@ -1,0 +1,64 @@
+.menu-logo{
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+@media only screen and (max-width: 768px){
+  /*nav-bar*/
+  nav ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    left: 0;
+    background: linear-gradient(340deg, #0099cc, #006699);
+    width: 1024px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 500;
+  }
+  nav ul li{
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-logo{
+    display: block;
+    cursor: pointer;
+  }
+  .nav-links a{
+    color: #fff;
+  }
+/*Korte-inleiding*/
+  .eerste-tekst {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 40%;
+    color: #fff;
+    font-size: 20px;
+    font-family: Agbalumo;
+}
+.korte-inleiding {
+  width: 1024px;
+}
+.personeel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  font-family: Agbalumo;
+  margin-top: -300px;
+  animation: Fade 2s linear infinite;
+      animation-play-state: paused;
+      animation-delay: calc(var(--scroll) * -3s);
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+}
+}

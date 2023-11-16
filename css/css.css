@@ -1,0 +1,294 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Agbalumo;
+    
+}
+    
+.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px 20px;
+        z-index: 2;
+       
+    }
+
+.logo {
+        margin-right: 20px;
+    }
+
+.nav-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80vh;
+        max-height: 3000px;
+        
+    }
+
+.nav-links a {
+        font-size: 25px;
+        color: #000;
+        text-decoration: none;
+        padding: 14px 16px;
+        margin: 0 5px; 
+
+    }
+
+    .nav-links{
+        list-style: none;
+
+    }
+
+.dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 3;
+    }
+
+.dropbtn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+.dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 29px;
+        z-index: 1;
+    }
+
+.dropdown-content img {
+        width: 30px;
+        padding: 9px 16px;
+        display: block;
+        text-align: left;
+    }
+
+.dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+.vlag{
+    width: 55px;
+}
+
+    /*eerste-sectie*/
+
+    .korte-inleiding {
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(340deg, #0099cc, #006699);
+        background-size: cover;
+        justify-content: space-around;
+        align-content: space-between;
+        align-items: center;
+        border-radius: 0 0 40% 40%;    
+        position: relative; 
+        animation: SlideUp1 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1.5s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    .title {
+        margin-bottom: auto;
+        position: absolute;
+        left: auto;
+        top: 3%;
+        font-size: 34px;
+        color: #fff;
+    }
+    
+
+
+    .logo{
+        width: 10%;
+    }
+
+.button{
+    scale: 110%;
+    background-color: rgb(102, 117, 233);
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 10%;
+    margin-top: 1%;
+    text-decoration: none;
+}
+
+.afb-alinea1{
+    width: 30%;
+}
+
+.eerste-tekst {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 40%;
+    color: #fff;
+    font-size: 20px;
+    font-family: Agbalumo;
+    
+}
+.schermen-alinia1{
+    width: 30%;
+}
+
+  /*personeel-sectie*/
+
+  .personeel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-family: Agbalumo;
+    margin-top: -300px;
+    animation: Fade 2s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -3s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+  }
+
+  .personeels-leden{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+  }
+
+  .icoontje{
+    width: 140px;
+  }
+
+  /*extra-info-sectie*/
+
+  .extra-info {
+    background: linear-gradient(140deg, #0099cc, #006699);
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0 2%;
+    font-family: Agbalumo;
+    height: 100vh;
+    position: relative;
+    animation: SlideUp2 2s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -2s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        z-index: 1;
+
+}
+
+.schermen {
+    width: 50%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.footer-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+.info-home{
+  font-size: 130%;
+}
+
+.logo-footer{
+    width: 10%;
+}
+
+/*Annimaties*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #006699;
+
+  }
+  .footer-inhoud{
+    display: flex;
+    align-items: baseline;
+    scale: 120%;
+    gap: 100px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    color: rgb(255, 255, 255);
+  }
+  .footer-inhoud a{
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+  }
+  .footer-inhoud i{
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .footer-1 p{
+    font-size: 12px;
+    margin: 5px 0px 5px 0px;
+  }
+  .footer-1 a{
+    font-size: 12px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Annimaties*/
+    /*Korte Inleiding*/
+        .Slidedowncontainer{
+            position: relative;
+            animation: SlideDown 1s;
+        }
+
+        @keyframes SlideDown{
+            0%   {top: -600px;}
+            100% {top:  0px;}
+        }
+        @keyframes SlideUp1{
+            0%   {top: 0px;}
+            100% {top: -600px;}
+        }
+    /*Personeel*/
+        @keyframes Fade{
+            0%   {opacity: 0;}
+            25% {opacity: 1;}
+            50% {opacity: 1;}
+            75% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+    /*extra-info*/
+        @keyframes SlideUp2{
+            0%   {margin-top: 0px;}
+            33%  {margin-top: 0px;}
+            100% {margin-top: -400px;}
+        }
