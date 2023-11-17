@@ -17,11 +17,11 @@ function changeLanguage(language) {
     // Navbar (vlaggen)
     var navlink3 = document.getElementById('navlink3');
     if (language === 'nederlands') {
-        navlink3.innerHTML = '<img class="vlag" src="https://imgur.com/U0JJlm2.png" alt="Belgische vlag">';
+        navlink3.innerHTML = '<img class="vlag" src="images/image-removebg-preview.png" alt="Belgische vlag">';
     } else if (language === 'engels') {
-        navlink3.innerHTML = '<img class="vlag" src="https://imgur.com/v6pv9P6.png" alt="Engelse vlag">';
+        navlink3.innerHTML = '<img class="vlag" src="images/v6pv9P6.png" alt="Engelse vlag">';
     } else if (language === 'frans') {
-        navlink3.innerHTML = '<img class="vlag" src="https://imgur.com/uuaeee4.png" alt="Franse vlag">';
+        navlink3.innerHTML = '<img class="vlag" src="images/uuaeee4.png" alt="Franse vlag">';
     }
 
     // Titel
