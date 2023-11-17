@@ -249,10 +249,62 @@ footer{
     font-size: 12px;
   }
 
-  /*Contactpagina*/
+  /*Producten-pagina*/
 
-/*contact-body*/
+  .landing-product{
+    background-image: url(https://i.imgur.com/ORKl2p0.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 400px;
+    position: relative;
 
+    
+  }
+
+  .text-product-top{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000; 
+    font-size: 34px; 
+    
+  }
+  .packages-section {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.package-column {
+    padding: 20px;
+    width: 25%;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.green-column {
+    background-color: #4CAF50; 
+}
+
+.blue-column {
+    background-color: #3498db; 
+}
+
+.gray-blue-column {
+    background-color: #2c3e50; 
+}
+
+.packinfo{
+    text-align: center;
+}
+.Prijs {
+    font-size: 36px;
+}
 
 
 
