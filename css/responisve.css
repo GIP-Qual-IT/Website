@@ -70,19 +70,45 @@
   justify-content:center;
 }
 
+.personeelstekst{
+  visibility:hidden;
+  height:0px;
+}
+
 .personeel{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   font-family: Agbalumo;
-  margin-top:0px;
+  margin-top:-200px;
+  margin-bottom:140px;
   animation: Fade 2s linear infinite;
       animation-play-state: paused;
       animation-delay: calc(var(--scroll) * -3s);
       animation-iteration-count: 1;
       animation-fill-mode: both;
+}
+
+.schermen{
+  height:0px;
+  visibility:hidden;
+}
+
+.info-home{
+  max-width:85%;
+}
+
+.extra-info{
+  flex-direction:column;
+}
+
+.footer-inhoud{
+  flex-direction:column;
+  gap: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .starterintrotitle{
