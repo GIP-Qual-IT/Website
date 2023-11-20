@@ -44,6 +44,7 @@
         position: relative;
         display: inline-block;
         z-index: 3;
+        margin-right:50px;
     }
 
 .dropbtn {
@@ -79,7 +80,7 @@
 
     .korte-inleiding {
         display: flex;
-        height: 100vh;
+        min-height: 100vh;
         background: linear-gradient(340deg, #0099cc, #006699);
         background-size: cover;
         justify-content: space-around;
