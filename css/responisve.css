@@ -49,7 +49,8 @@
 /*Korte-inleiding*/
   .eerste-tekst {
     display: flex;
-    align-items: flex-start;
+    align-items:center;
+    text-align: center;
     flex-direction: column;
     width: 80%;
     margin-left:-20px;
@@ -61,12 +62,17 @@
 .personeels-leden{
   width:80%;
   margin-top:30px;
+
+}
+
+.personeels-leden :hover {
+  all:unset;
 }
 
 .korte-inleiding {
   width: 100%;
   flex-direction:column;
-  min-height:110vh;
+  min-height:60vh;
   justify-content:center;
 }
 
@@ -80,15 +86,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 120vh;
+  height: 70vh;
   font-family: Agbalumo;
-  margin-top:-200px;
+  margin-top:100px;
   margin-bottom:140px;
-  animation: Fade 2s linear infinite;
-      animation-play-state: paused;
-      animation-delay: calc(var(--scroll) * -3s);
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
+  animation:none;
 }
 
 .schermen{
@@ -102,16 +104,31 @@
 
 .extra-info{
   flex-direction:column;
+  max-height:600px;
 }
 
 .footer-inhoud{
   flex-direction:column;
   gap: 30px;
-  margin-top: 60px;
+  margin-top:50px;
   margin-bottom: 60px;
 }
 
 .starterintrotitle{
   visibility:hidden;
+}
+
+.Slidedowncontainer{
+  max-height:500px;
+}
+
+footer{
+  margin-bottom:300px;
+}
+
+.centertext{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 }
