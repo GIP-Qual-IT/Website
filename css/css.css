@@ -157,6 +157,7 @@
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    position: relative;
     font-family: Agbalumo;
     margin-top: -300px;
     animation: Fade 2s linear infinite;
@@ -235,7 +236,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #006699;
+    background-color: white;
 
   }
   .footer-inhoud{
@@ -245,10 +246,10 @@ footer{
     gap: 100px;
     margin-top: 20px;
     margin-bottom: 32px;
-    color: rgb(255, 255, 255);
+    color: black;
   }
   .footer-inhoud a{
-    color: rgb(255, 255, 255);
+    color: black;
     padding-bottom: 20px;
   }
   .footer-inhoud i{
@@ -382,4 +383,9 @@ footer{
             0%   {margin-top: 0px;}
             33%  {margin-top: 0px;}
             100% {margin-top: -400px;}
+        }
+        @keyframes SlideRight{
+            0%   {left: -500px;}
+            50%  {left: 0px;}
+            100% {left: 0px;}
         }
