@@ -128,4 +128,24 @@
   justify-content:center;
   align-items:center;
 }
+
+.contacteermain{
+  max-width:350px;
+}
+
+.contact-body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.contacteerform{
+  max-width:350px;
+  margin-bottom:-100px;;
+}
+
+.contacteertextarea{
+  min-width:330px;
+}
 }

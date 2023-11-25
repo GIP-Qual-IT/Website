@@ -210,10 +210,10 @@
 }
 
 footer{
+    position:relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .footer-items{
@@ -343,11 +343,62 @@ footer{
     width: 30px;
 }
 
+.contacteermain{
+    display:flex;
+    justify-content:center;
+}
 
+.contacteerform{
+    max-width:600px;
+    height:800px;
+}
 
+.contacteersection{
+    display:flex;
+    flex-direction:column;
+    margin-top:20%;
+    gap:15px;
+}
 
+.contacteertextarea{
+    resize:none;
+    width:30%;
+    border:black solid 2px;
+    min-width:500px;
+    max-height:300px;
+    background-color:rgba(0, 242, 255, 0.308);
+    padding:5px;
+}
 
+.inputdivnaam{
+    display:flex;
+    justify-content:space-between;
+}
 
+.inputnaam{
+    width:45%;
+}
+
+.contacteerinput{
+    padding:5px;
+    height:30px;
+    background-color:rgba(0, 242, 255, 0.308);
+}
+
+.formsend{
+    height:40px;
+    background-color:darkblue;
+    border:black solid 2px;
+    color:white;
+    font-size:20px;
+    min-width:30%;
+}
+
+.formsendbox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
 
 
