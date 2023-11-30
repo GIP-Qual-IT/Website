@@ -148,4 +148,21 @@
 .contacteertextarea{
   min-width:330px;
 }
+
+.over-container2-1{
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.over-container2-2{
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.over-container2-3{
+  width: 66%;
+}
+.over-vakje1{
+  width: 90%;
+}
 }
