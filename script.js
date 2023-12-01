@@ -84,4 +84,3 @@ document.addEventListener("DOMContentLoaded", function () {
     let menuIcon = document.querySelector(".menu-logo");
     menuIcon.addEventListener("click", menutoggle);
 });
-
