@@ -2,18 +2,21 @@ function changeLanguage(language) {
     // Navbar
     var navlink1 = document.getElementById('navlink1');
     var navlink2 = document.getElementById('navlink2');
+    var lang = document.getElementById('lang')
     
     if (language === 'nederlands') {
         navlink1.textContent = 'Producten';
         navlink2.textContent = 'Over ons';
+        lang.lang = 'nl'
     } else if (language === 'engels') {
         navlink1.textContent = 'Products';
         navlink2.textContent = 'About us';
+        lang.lang = 'en'
     } else if (language === 'frans') {
         navlink1.textContent = 'Produits';
         navlink2.textContent = 'A propos de nous';
+        lang.lang = 'fr'
     }
-
     // Navbar (vlaggen)
     var navlink3 = document.getElementById('navlink3');
     if (language === 'nederlands') {

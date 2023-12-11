@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
+    <script defer src="contact.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/responisve.css">
@@ -37,7 +37,7 @@
                         <img id="frans" src="images/uuaeee4.png" alt="Franse vlag" onclick="changeLanguage('frans')">
                     </div>
                </div>
-               <img class="menu-logo" src="https://imgur.com/1iPwhVv.jpg" alt="menu-icon" onclick="menutoggle()">
+               <img class="menu-logo" src="images/Hamburger_icon.svg.png" alt="menu-icon">
            </div> 
         </nav>
        </header>
@@ -45,12 +45,12 @@
             <form class="contacteerform" action="mailto:recipient@example.com" method="post" enctype="text/plain">
                 <section class="contacteersection">
                     <div class="inputdivnaam">
-                        <input class="inputnaam contacteerinput" type="text" name="voornaam " placeholder="NAAM">
-                        <input  class="inputnaam contacteerinput" type="text" name="achternaam " placeholder="ACHTERNAAM">
+                        <input class="inputnaam contacteerinput" type="text" id="naam" name="voornaam " placeholder="NAAM">
+                        <input  class="inputnaam contacteerinput" type="text" id="achternaam" name="achternaam " placeholder="ACHTERNAAM">
                     </div>
-                        <input class="contacteerinput" type="text" name="email " placeholder="EMAIL">
-                        <input class="contacteerinput" type="text" name="Telefoonnummer " placeholder="TELEFOONNUMMER">
-                        <textarea rows="20" cols="35" class="contacteertextarea" name="mail " placeholder="Iets laten weten? Typ het hier."></textarea>
+                        <input class="contacteerinput" type="text" name="email" placeholder="EMAIL">
+                        <input class="contacteerinput" type="text" id="nummer" name="Telefoonnummer " placeholder="TELEFOONNUMMER">
+                        <textarea rows="20" cols="35" class="contacteertextarea" id="mail" name="mail " placeholder="Iets laten weten? Typ het hier."></textarea>
                         <input class="formsend" type="submit" value="send">
                 </section>    
             </form>
