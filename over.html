@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/responisve.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="overons.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/b6a006d7-1e42-46c8-81e7-bc8e0995e23d-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <title>Qual-IT | Over ons</title>
@@ -28,9 +29,9 @@
                        <img class="vlag" src="images/image-removebg-preview.png" alt="nationale vlag">
                    </button>
                    <div class="dropdown-content">
-                       <img id="nederlands" src="images/image-removebg-preview.png" alt="Belgische vlag" onclick="changeLanguage('nederlands')">
-                       <img id="engels" src="images/v6pv9P6.png" alt="Engelse vlag" onclick="changeLanguage('engels')">
-                       <img id="frans" src="images/uuaeee4.png" alt="Franse vlag" onclick="changeLanguage('frans')">
+                    <img id="nederlands" src="https://imgur.com/U0JJlm2.png" alt="Belgische vlag" onclick="changeLanguage('nederlands')">
+                    <img id="engels" src="https://imgur.com/v6pv9P6.png" alt="Engelse vlag" onclick="changeLanguage('engels')">
+                    <img id="frans" src="https://imgur.com/uuaeee4.png" alt="Franse vlag" onclick="changeLanguage('frans')">
                    </div>
                </div>
                <img class="menu-logo" src="images/Hamburger_icon.svg.png" alt="menu-icon">
@@ -45,15 +46,15 @@
                         <img class="persoonimages" src="images/IMG_1249.jpg" alt="">
                     </div>       
                     <div class="over-container1-1-1">
-                        <h4 class="persoonstekst">Yessin, CEO bij Qual-IT, leidt het bedrijf, geeft een flinke boost aan innovatie, en is altijd bezig met wat er in de tech-wereld te gebeuren staat, vooral met dingen als kunstmatige intelligentie en blockchain. Met zijn relaxte aanpak zorgt Yessin ervoor dat Qual-IT altijd een stapje voor is.</h4>
+                        <h4 id="Yessintekst" class="persoonstekst">Yessin, CEO bij Qual-IT, leidt het bedrijf, geeft een flinke boost aan innovatie, en is altijd bezig met wat er in de tech-wereld te gebeuren staat, vooral met dingen als kunstmatige intelligentie en blockchain. Met zijn relaxte aanpak zorgt Yessin ervoor dat Qual-IT altijd een stapje voor is.</h4>
                     </div>
                 </div>
                 <div class="over-container1-2 anim2">
                     <div class="over-container1-1-3">
-                        <img class="persoonimages" src="images/IMG_1493.jpg" alt="">
+                        <img class="persoonimages" src="images/jefdeloser.jpg" alt="">
                     </div>       
                     <div class="over-container1-1-1">
-                        <h4 class="persoonstekst">Als top webontwikkelaar in ons ICT-bedrijf, mixt Jef zijn technische skills en creativiteit om websites te maken die de standaard in de business omhoog krikken. Met een scherp oog voor de laatste trends en een passie voor vernieuwing, brengt Jef unieke en gebruiksvriendelijke online ervaringen tot leven, waardoor onze klanten zich onderscheiden in de digitale wereld.</h4>
+                        <h4 id="Jeftekst" class="persoonstekst">Als top webontwikkelaar in ons ICT-bedrijf, mixt Jef zijn technische skills en creativiteit om websites te maken die de standaard in de business omhoog krikken. Met een scherp oog voor de laatste trends en een passie voor vernieuwing, brengt Jef unieke en gebruiksvriendelijke online ervaringen tot leven, waardoor onze klanten zich onderscheiden in de digitale wereld.</h4>
                     </div>
                 </div>
                 <div class="over-container1-1 anim3">
@@ -61,7 +62,7 @@
                         <img class="persoonimages" src="images/IMG_1244.jpg" alt="">
                     </div>       
                     <div class="over-container1-1-1">
-                        <h4 class="persoonstekst">Als server-side ontwikkelaar in ons ICT-team, gooit Arne alle coole back-end trucjes in de mix om stevige en flexibele systemen te bouwen die de digitale wereld van onze klanten echt een boost geven. Met zijn enthousiasme en hands-on aanpak zorgt Arne ervoor dat onze klanten altijd een solide digitale basis hebben.</h4>
+                        <h4 id="Arnetekst" class="persoonstekst">Als server-side ontwikkelaar in ons ICT-team, gooit Arne alle coole back-end trucjes in de mix om stevige en flexibele systemen te bouwen die de digitale wereld van onze klanten echt een boost geven. Met zijn enthousiasme en hands-on aanpak zorgt Arne ervoor dat onze klanten altijd een solide digitale basis hebben.</h4>
                     </div>
                 </div>
             </div>
@@ -70,7 +71,18 @@
                     <div class="over-container2-1">
                         <div class="over-container2-2">
                             <div class="over-vakje1">
-                                <img class="over-imgjs" src="images/js-logo.png" alt="">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                        <img class="over-imgjs" src="images/js-logo.png" alt="">
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <h1>John Doe</h1>
+                                        <p>Architect & Engineer</p>
+                                        <p>We love that guy</p>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                             <div class="over-vakje1">
                                 <img class="over-img" src="images/CSS3_logo.svg.png" alt="">
@@ -101,14 +113,14 @@
                 <h3>Qual-IT</h3>
                     <p>Diestestraat 163</p>
                     <p>3000 Leuven</p>
-                    <a target="_blank" href="https://www.google.com/maps/place/Miniemeninstituut/@50.8814123,4.7067479,17z/data=!4m14!1m7!3m6!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!2sMiniemeninstituut!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c!3m5!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c?entry=ttu">routebeschrijving</a>
+                    <a id="route" target="_blank" href="https://www.google.com/maps/place/Miniemeninstituut/@50.8814123,4.7067479,17z/data=!4m14!1m7!3m6!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!2sMiniemeninstituut!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c!3m5!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c?entry=ttu">routebeschrijving</a>
             </div>
             <div class="footer-2">
-                <h3>Op maat</h3>
-                    <p>Speciaal voor jouw</p>
+                <h3 id="footerTitel">Op maat</h3>
+                    <p id="footerSpeciaal">Speciaal voor jouw</p>
             </div>
             <div class="footer-3">
-                <p><span class="hoofdletter">ONTDEK MEER</p>
+                <p id="footerOntdek"><span class="hoofdletter">ONTDEK MEER</p>
                 <a target="_blank" href="https://www.facebook.com/?locale=nl_NL"><i class="bi bi-facebook"></i></a>
                 <a target="_blank" href="https://www.linkedin.com/login/nl"><i class="bi bi-linkedin"></i></a>
                 <a target="_blank" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>

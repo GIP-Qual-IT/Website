@@ -1,3 +1,4 @@
+window.onload = changeLanguage;
 function changeLanguage(language) {
     // Navbar
     var navlink1 = document.getElementById('navlink1');
@@ -7,9 +8,13 @@ function changeLanguage(language) {
     var nummer = document.getElementById('nummer')
     var mail = document.getElementById('mail')
     var lang = document.getElementById('lang')
+    var send = document.getElementById('send')
+    var contact = document.getElementById('contacttitel')
     
     if (language === 'nederlands') {
         navlink1.textContent = 'Producten';
+        contact.textContent = 'Contacteer ons:'
+        send.value = 'stuur'
         navlink2.textContent = 'Over ons';
         naam.placeholder='NAAM';
         nummer.placeholder='TELEFOONNUMMER'
@@ -18,6 +23,8 @@ function changeLanguage(language) {
         lang.lang = 'nl'
     } else if (language === 'engels') {
         navlink1.textContent = 'Products';
+        contact.textContent = 'Contact us:'
+        send.value = 'send'
         navlink2.textContent = 'About us';
         naam.placeholder='NAME';
         nummer.placeholder='NUMBER'
@@ -26,6 +33,8 @@ function changeLanguage(language) {
         lang.lang = 'en'
     } else if (language === 'frans') {
         navlink1.textContent = 'Produits';
+        contact.textContent = 'Contactez-nous:'
+        send.value = 'envoyer'
         navlink2.textContent = 'A propos de nous';
         naam.placeholder='PRENOM';
         nummer.placeholder='NUMÉRO DE TÉLÉPHONE'
@@ -41,6 +50,39 @@ function changeLanguage(language) {
         navlink3.innerHTML = '<img class="vlag" src="images/v6pv9P6.png" alt="Engelse vlag">';
     } else if (language === 'frans') {
         navlink3.innerHTML = '<img class="vlag" src="images/uuaeee4.png" alt="Franse vlag">';
+    }
+    //vertaling
+    var footerTitel = document.getElementById('footerTitel')
+    if (language === 'nederlands') {
+        footerTitel.innerHTML = 'over ons'
+    } else if (language === 'engels') {
+        footerTitel.innerHTML = 'about us'
+    } else if (language === 'frans') {
+        footerTitel.innerHTML = 'à propos de nous'
+    }
+
+    //vertaling
+    var footerSpeciaal = document.getElementById('footerSpeciaal')
+    if (language === 'nederlands') {
+        footerSpeciaal.innerHTML = 'Speciaal voor jouw'
+    } else if (language === 'engels') {
+        footerSpeciaal.innerHTML = 'Especially for your'
+    } else if (language === 'frans') {
+        footerSpeciaal.innerHTML = 'En particulier pour votre'
+    }
+    
+    //vertaling
+    var footerOntdek = document.getElementById('footerOntdek')
+    var route = document.getElementById('route')
+    if (language === 'nederlands') {
+        footerOntdek.innerHTML = 'Speciaal voor jouw'
+        route.innerHTML = 'routebeschrijving'
+    } else if (language === 'engels') {
+        footerOntdek.innerHTML = 'Discover more'
+        route.innerHTML = 'travel directions'
+    } else if (language === 'frans') {
+        footerOntdek.innerHTML = 'Découvrir plus'
+        route.innerHTML = 'itinéraires de voyage'
     }
 
 }

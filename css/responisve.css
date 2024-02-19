@@ -1,4 +1,4 @@
-.menu-logo{
+  .menu-logo{
   width: 28px;
   margin-left: 20px;
   display: none;
@@ -14,7 +14,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 70px;
+    top: 100px;
     left: 0;
     background: linear-gradient(340deg, #0099cc, #006699);
     width: 100%;
@@ -35,6 +35,19 @@
   visibility:hidden;
   height:0px;
 }
+
+@media screen and (max-width: 768px) {
+  .yarne{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  }
+  }
+  @media screen and (max-width: 768px) {
+  .ons-Werk{
+  font-size: 35px;
+  }
+  }
 
   nav ul li{
     display: block;
@@ -66,6 +79,11 @@
     font-family: Agbalumo;
 }
 
+.extra-info {
+  height: auto;
+}
+
+
 .personeels-leden{
   width:80%;
   margin-top:30px;
@@ -92,7 +110,7 @@
   height: 70vh;
   font-family: Agbalumo;
   margin-top:100px;
-  margin-bottom:140px;
+  margin-bottom:480px;
   animation: Fade2 2s linear infinite;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -3s);
@@ -111,7 +129,7 @@
 
 .extra-info{
   flex-direction:column;
-  max-height:600px;
+  min-height:650px;
 }
 
 .footer-inhoud{
@@ -199,4 +217,120 @@
   box-shadow:0px 0px 5px 5px rgb(4, 176, 185);
   margin: 6.5px;
 } 
+}
+
+/*Producten-pagina*/
+
+.landing-product {
+  background-image: url(https://i.imgur.com/ORKl2p0.png);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 370px;
+  position: relative;
+}
+
+.text-product-top {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 34px;
+}
+
+
+.package-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 20%;
+  border-radius: 8px;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.custom-pack-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 7%;
+}
+
+.green-column {
+  background-color: #4CAF50;
+}
+
+.blue-column {
+  background-color: #3498db;
+}
+
+.gray-blue-column {
+  background-color: #2c3e50;
+}
+
+.packinfo {
+  text-align: center;
+}
+
+.Prijs {
+  font-size: 36px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .landing-product {
+      height: 250px;
+  }
+
+  .text-product-top {
+      font-size: 24px;
+  }
+
+  .package-column {
+      width: 40%;
+      margin-bottom: 20px;
+  }
+
+  .packages-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+ .logo{
+  width: 25%;
+ }
+ 
+  .landing-product {
+    display: none;
+  }
+
+  .text-product-top {
+      font-size: 18px;
+  }
+
+  .packages-section {
+      flex-direction: column;
+  }
+
+  .package-column {
+      width: 80%;
+  }
+
+  .custom-pack-link h3 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 7%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
