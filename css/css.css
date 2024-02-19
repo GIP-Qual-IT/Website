@@ -193,7 +193,6 @@
     background: linear-gradient(140deg, #0099cc, #006699);
     color: #fff;
     display: flex; 
-    
     align-items: center; 
     justify-content: center; 
     padding: 0 2%;
@@ -228,10 +227,7 @@ footer{
     
 }
 .info-home{
-    display:flex;
-    flex-direction:column ;
   font-size: 130%;
-  gap: 30px;
 }
 
 .logo-footer{
