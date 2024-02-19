@@ -43,6 +43,39 @@ function changeLanguage(language) {
         Arnetekst.textContent = 'En tant que développeur côté serveur dans notre équipe informatique, Arne combine toutes les astuces intéressantes du back-end pour construire des systèmes robustes et flexibles qui améliorent vraiment le monde numérique de nos clients. Avec son enthousiasme et son approche pratique, Arne veille à ce que nos clients aient toujours une base numérique solide';
         lang.lang = 'fr'
     }
+    //vertaling
+    var footerTitel = document.getElementById('footerTitel')
+    if (language === 'nederlands') {
+        footerTitel.innerHTML = 'over ons'
+    } else if (language === 'engels') {
+        footerTitel.innerHTML = 'about us'
+    } else if (language === 'frans') {
+        footerTitel.innerHTML = 'à propos de nous'
+    }
+
+    //vertaling
+    var footerSpeciaal = document.getElementById('footerSpeciaal')
+    if (language === 'nederlands') {
+        footerSpeciaal.innerHTML = 'Speciaal voor jouw'
+    } else if (language === 'engels') {
+        footerSpeciaal.innerHTML = 'Especially for your'
+    } else if (language === 'frans') {
+        footerSpeciaal.innerHTML = 'En particulier pour votre'
+    }
+    
+    //vertaling
+    var footerOntdek = document.getElementById('footerOntdek')
+    var route = document.getElementById('route')
+    if (language === 'nederlands') {
+        footerOntdek.innerHTML = 'Speciaal voor jouw'
+        route.innerHTML = 'routebeschrijving'
+    } else if (language === 'engels') {
+        footerOntdek.innerHTML = 'Discover more'
+        route.innerHTML = 'travel directions'
+    } else if (language === 'frans') {
+        footerOntdek.innerHTML = 'Découvrir plus'
+        route.innerHTML = 'itinéraires de voyage'
+    }
 
 
 }
