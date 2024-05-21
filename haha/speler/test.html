@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+}
+ 
+.uitslag{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.uitslag-datum{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  font-size: 36px;
+  margin: 0 60px;
+}
+ 
+.datumM{
+  padding-right: 20px;
+  background-color: grey;
+  font-size: 22px;
+  color: white;
+}
+ 
+.bold{
+  font-weight: bolder;
+}
+ 
+.uitslag1{
+  display: flex;
+}
+ 
+.ploegen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.extra{
+  display: flex;
+  background-color: #acc992;
+  padding: 1rem 1rem 1.5625rem;
+  width: 440px;
+  color: white;
+  flex-direction: column;
+}
+ 
+.club-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.club-naam{
+  font-size: 23px;
+}
+ 
+.uitslag-container{
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+ 
+.club-schild{
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+ 
+.ploeg{
+  background-color: darkgreen;
+  height: 21px;
+  padding: 8px 20px;
+}
+ 
+.match-uur{
+  padding-top: 8px;
+}
+ 
+ 
+.stand{
+  font-size: 35px;
+  display: flex;
+}
+    </style>
+</head>
+<body>
+    <section class="uitslagen">
+        <div class="uitslag-datum">
+        <p>uitslagen</p>
+        <a href="">zie meer</a>
+        </div>
+         
+          <div class="uitslag">
+         
+            <!-- Uitslag 1 -->
+        <div class="uitslag1">
+        <div class="datumM">
+        <p>
+                  10<br>
+        <span class="bold">Maart</span>
+        </p>
+        </div>
+        <div class="extra">
+        <div class="uitslag-container">
+        <p class="ploeg">A-team</p>
+        <p class="match-uur">15:00</p>
+        </div>
+        <div class="ploegen">
+        <div class="club-info">
+        <img src="neerwinden.png" alt="" class="club-schild">
+        <p class="club-naam">Neerwinden</p>
+        </div>
+        <div class="stand">
+        <p>1</p>
+        <p>-</p>
+        <p>0</p>
+        </div>
+        <div class="club-info">
+        <img src="8f9e107c-3b55-437a-b39a-0bcfcb6a0438.webp" alt="" class="club-schild">
+        <p class="club-naam">Linden</p>
+        </div>
+        </div>
+        </div>
+        </div>
+         
+            <!-- Uitslag 2 -->
+        <div class="uitslag1">
+        <div class="datumM">
+        <p>
+                  10<br>
+        <span class="bold">Maart</span>
+        </p>
+        </div>
+        <div class="extra">
+        <div class="uitslag-container">
+        <p class="ploeg">U21</p>
+        <p class="match-uur">18:00</p>
+        </div>
+        <div class="ploegen">
+        <div class="club-info">
+        <img src="neerwinden.png" alt="" class="club-schild">
+        <p class="club-naam">Neerwinden</p>
+        </div>
+        <div class="stand">
+        <p>4</p>
+        <p>-</p>
+        <p>2</p>
+        </div>
+        <div class="club-info">
+        <img src="neerwinden.png" alt="" class="club-schild">
+        <p class="club-naam">Stvv</p>
+        </div>
+        </div>
+        </div>
+        </div>
+         
+          </div>
+         
+        </section>
+    
+</body>
+</html>

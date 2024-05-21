@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Day and Month</title>
+</head>
+<body>
+
+    <h1>Current Day and Month</h1>
+
+    <script>
+        // Get the current date
+        var currentDate = new Date();
+
+        // Get the current day (1-31)
+        var currentDay = currentDate.getDate();
+
+        // Get the current month (0-11; note that months are zero-indexed)
+        var currentMonth = currentDate.getMonth() + 1;
+
+        // Display the current day and month
+        document.write("<p>Current Day: " + currentDay + "</p>");
+        document.write("<p>Current Month: " + currentMonth + "</p>");
+    </script>
+
+</body>
+</html>

@@ -1,10 +1,22 @@
+//Calls up prefered Language
+storedJsonString = localStorage.getItem("StoredLanguage");
+StoredLanguage = JSON.parse(storedJsonString);
+//If empty page will be in English
+if (StoredLanguage === null) {
+  currentlanguage = "nederlands";
+  changeLanguage(currentlanguage);
+}else {
+  currentlanguage = StoredLanguage;
+  changeLanguage(currentlanguage);
+};
 function changeLanguage(language) {
     
   // Navbar
     var navlink1 = document.getElementById('navlink1');
-    var navlink2 = document.getElementById('navlink2');
-           
-   
+    var navlink2 = document.getElementById('navlink2');   
+
+    currentlanguage = language;
+    localStorage.setItem("StoredLanguage", JSON.stringify(currentlanguage));
     
     if (language === 'nederlands') {
         navlink1.textContent = 'Producten';

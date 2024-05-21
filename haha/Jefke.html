@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ploeg-leden{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     
+    .staff-title{
+        font-size: 40px;
+        text-decoration: underline;
+        padding: 40px 0;
+    }
+     
+    .trainer{
+        display: flex;
+        gap: 100px;
+    }
+     
+    .spelerkaart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        background-color: #4c7243;
+        width: 250px;
+        border-radius: 10px;
+    }
+     
+    .speler-foto{
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 30px;
+    }
+     
+    .trainer-naam{
+        font-size: 30px;
+        color: #fff;
+        padding-bottom: 15px;
+    }
+     
+    .trainer-taak{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+        color: #fff;
+        width: 70%;
+    }
+    </style>
+</head>
+<body>
+    <main class="ploeg-leden">
+        <h1 class="staff-title">Onze Trainers</h1>
+        <section id="trainers" class="trainer">
+     
+        </section>
+        <h1 class="staff-title">Onze Spelers</h1>
+        <section id="spelers" class="spelers">
+
+        </section>
+        <script>
+            fetch('https://datalake-prod2018.rbfa.be/graphql?operationName=GetTeamMembers&variables=%7B%22teamId%22%3A%22283155%22%2C%22language%22%3A%22nl%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22cbbaa32e4580c9385409c85464d2578c88f1c051f6e3c55a2e5a47f11dce9e64%22%7D%7D')
+                .then(response => response.json())
+                .then(data => {
+                        const staf = data.data.teamMembers.staff;
+                        const trainers = document.getElementById('trainers');
+    
+                        // Check if 'players' is an array and not empty
+                        if (Array.isArray(staf) && staf.length > 0) {
+                            staf.forEach(staff => {
+                                // Create list item for each player and append to the list
+                                const listItem = document.createElement('div');
+                                listItem.classList.add('spelerkaart');
+                                listItem.innerHTML = `
+                                <img class="speler-foto" src="afbeeldingen/blanco-profiel.webp" alt="afb-lid" class="picture">
+                                <div class="speler-text">
+                                <h2 class="trainer-naam">${staff.firstName} ${staff.lastName}</h2>
+                                <p class="trainer-taak">${staff.function}</p>
+                                </div>
+                                `;
+                                trainers.appendChild(listItem);
+                            });
+                        } else {
+                            console.error('No players found in the JSON response.');
+                        }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+                fetch('https://datalake-prod2018.rbfa.be/graphql?operationName=GetTeamMembers&variables=%7B%22teamId%22%3A%22283190%22%2C%22language%22%3A%22nl%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22cbbaa32e4580c9385409c85464d2578c88f1c051f6e3c55a2e5a47f11dce9e64%22%7D%7D')
+            .then(response => response.json())
+            .then(data => {
+                    const players = data.data.teamMembers.players;
+                    const playersList = document.getElementById('spelers');
+
+                        players.forEach(player => {
+                            // Create list item for each player and append to the list
+                            const listItem = document.createElement('div');
+                                listItem.classList.add('spelerkaart');
+                                listItem.innerHTML = `
+                                <img class="speler-foto" src="afbeeldingen/blanco-profiel.webp" alt="afb-lid" class="picture">
+                                <div class="speler-text">
+                                <h2 class="trainer-naam">${player.firstName} ${player.lastName}</h2>
+                                <p class="trainer-taak">Matches:${player.statistics.numberOfMatches}</p>
+                                <p class="trainer-taak">Goals:${player.statistics.numberOfGoals}</p>
+                                </div>
+                                `;
+                            playersList.appendChild(listItem);
+                        });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+
+        </script>
+    </main>
+</body>
+</html>

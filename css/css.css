@@ -4,6 +4,7 @@
     margin: 0;
     font-family: "Radio Canada", sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .navbar {
         position: sticky;
@@ -22,7 +23,6 @@
     .centertekst{
         line-height: 2;
     }
-
 .nav-links {
         display: flex;
         justify-content: space-evenly;
@@ -171,7 +171,35 @@
         animation-iteration-count: 1;
         animation-fill-mode: both;
   }
-
+.none{
+    all: unset;
+}
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 30%;
+    font-weight: bolder;
+}
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
   .personeels-leden{
     display: flex;
     flex-direction: column;
@@ -380,9 +408,7 @@ footer{
     text-align: center;
     border-radius: 10px;
     min-width: 300px;
-    height: 500px;
   }
-
 
   .image {
     max-width: 100%;
@@ -428,6 +454,7 @@ footer{
 display: flex;
 margin-left: 7px;
 margin-right: 7px;
+font-family: "Radio Canada", sans-serif;
 }
 .Onswerk-tekst{
 display: flex;
@@ -486,8 +513,45 @@ margin-right: 7px;
     width: 30px;
 }
  /* ------ O V E R   P A G I N A ------ */
+  
+  
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.modal-content {
+    background: linear-gradient(90deg, #ffffff, #6eb8dd);
+    margin: 10% auto;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 8px;
+    line-height: 1.5;
+    width: 40%;
+    max-height: 90vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
 
+.close {
+    color: #555;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+}
   .project{
     display: flex;
     flex-direction: column;
@@ -716,7 +780,12 @@ margin-right: 7px;
     justify-content:center;
     align-items:center;
 }
-
+.up{
+    position: fixed;
+    bottom: 6%;
+    right: 1.5%;
+    z-index: 10;
+}
 
 
 
@@ -762,4 +831,3 @@ margin-right: 7px;
             0%   {right: -500px; opacity:0;}
             100% {right: 0px; opacity:1;}
         }
-        

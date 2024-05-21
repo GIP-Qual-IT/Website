@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voetbalwedstrijden</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Voetbalwedstrijden</h1>
+
+<table id="matchesTable">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Thuisploeg</th>
+            <th>Uitploeg</th>
+            <th>Locatie</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Wedstrijden worden hier ingevoegd via JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Function to get and display matches
+    async function getMatches() {
+        const apiUrl = 'https://datalake-prod2018.rbfa.be/graphql?operationName=clubMatchesAssignations&variables=%7B%22clubId%22%3A%222905%22%2C%22language%22%3A%22nl%22%2C%22startDate%22%3A%222024%2F03%2F01%22%2C%22endDate%22%3A%222024%2F12%2F30%22%2C%22hasLocation%22%3Atrue%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%22ae7ac199b18b57747ba6e3a8c26a19e022ac3f201508e28836bbeb9f8bd831be%22%7D%7D';
+
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            const matches = data.data.clubMatchesAssignations;
+
+            // Voeg elke wedstrijd toe aan de tabel
+            const tableBody = document.getElementById("matchesTable").getElementsByTagName('tbody')[0];
+            matches.forEach(match => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = new Date(match.startTime).toLocaleDateString();
+                row.insertCell(1).innerHTML = `<img class="team-logo" src="${match.homeTeam.logo}" alt="${match.homeTeam.name}">${match.homeTeam.name}`;
+                row.insertCell(2).innerHTML = `<img class="team-logo" src="${match.awayTeam.logo}" alt="${match.awayTeam.name}">${match.awayTeam.name}`;
+                row.insertCell(3).innerText = match.location.address + ', ' + match.location.city;
+                row.insertCell(4).innerText = match.showScore ? `${match.outcome.homeTeamGoals} - ${match.outcome.awayTeamGoals}` : 'Nog niet gespeeld';
+            });
+        } catch (error) {
+            console.error("Fout bij het ophalen van gegevens:", error);
+        }
+    }
+
+    // Roep de functie aan wanneer de pagina geladen is
+    window.onload = () => {
+        getMatches();
+    };
+</script>
+
+</body>
+</html>

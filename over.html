@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/responisve.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="overons.js"></script>
+    <script defer src="overons.js"></script>
     <link rel="icon" type="image/x-icon" href="/images/b6a006d7-1e42-46c8-81e7-bc8e0995e23d-removebg-preview.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
@@ -40,8 +40,47 @@
        </header>
 
        <main>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal(1)">&times;</span>
+                <h1>JavaScript (JS)</h1><br>
+                <p>JavaScript is een programmeertaal die veel gebruikt wordt in webontwikkeling om interactiviteit en dynamische functies aan websites toe te voegen. Het wordt hoofdzakelijk uitgevoerd in webbrowsers, waardoor ontwikkelaars de inhoud, structuur en het gedrag van webpagina's kunnen manipuleren.</p>
+            </div>
+          </div>
+        
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal(2)">&times;</span>
+              <h1>CSS (Cascading Style Sheets)</h1><br>
+              <p>CSS is een opmaaktaal die wordt gebruikt in webontwikkeling om de presentatie en opmaak van een website te beheren. Het stelt ontwikkelaars in staat om de visuele stijl van HTML-elementen aan te passen en zo de lay-out, kleuren, lettertypen en andere visuele aspecten van een webpagina te definiëren.</p>
+            </div>
+          </div>
+        
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal(3)">&times;</span>
+              <h1>HTML (HyperText Markup Language)</h1><br>
+              <p>HTML is de standaard opmaaktaal die wordt gebruikt om de structuur en inhoud van webpagina's te definiëren. Het staat voor HyperText Markup Language en fungeert als de bouwsteen van het web. In plaats van zich bezig te houden met de visuele presentatie, concentreert HTML zich op het aanduiden van de betekenis en hiërarchie van de informatie op een pagina.</p>
+            </div>
+          </div>
+        
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal(4)">&times;</span>
+              <h1>PHP: Server-side Scripting voor Dynamische Webpagina's</h1><br>
+              <p>PHP, wat staat voor Hypertext Preprocessor, is een populaire server-side scriptingtaal die speciaal is ontworpen voor de ontwikkeling van dynamische webpagina's. In tegenstelling tot HTML, dat zich richt op de structuur van webpagina's, stelt PHP ontwikkelaars in staat om interactieve en dynamische functies aan websites toe te voegen.</p>
+            </div>
+          </div>
+        
+          <div id="modal5" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal(5)">&times;</span>
+              <h1>SQL (Structured Query Language)</h1><br>
+              <p>SQL is een specifieke programmeertaal die wordt gebruikt voor het beheren en manipuleren van relationele databases. Het is ontworpen om op een gestandaardiseerde manier te communiceren met databases en wordt veel gebruikt in softwaretoepassingen die gegevensopslag en -beheer vereisen.</p>
+            </div>
+          </div>
             <div class="over-container1">
-                <div class="over-container1-1 anim1">
+                <div id="yessin" class="over-container1-1 anim1">
                     <div class="over-container1-1-2">
                         <img class="persoonimages" src="images/IMG_1249.jpg" alt="">
                     </div>       
@@ -49,7 +88,7 @@
                         <h4 id="Yessintekst" class="persoonstekst">Yessin, CEO bij Qual-IT, leidt het bedrijf, geeft een flinke boost aan innovatie, en is altijd bezig met wat er in de tech-wereld te gebeuren staat, vooral met dingen als kunstmatige intelligentie en blockchain. Met zijn relaxte aanpak zorgt Yessin ervoor dat Qual-IT altijd een stapje voor is.</h4>
                     </div>
                 </div>
-                <div class="over-container1-2 anim2">
+                <div id="jef" class="over-container1-2 anim2">
                     <div class="over-container1-1-3">
                         <img class="persoonimages" src="images/IMG_1493.jpg" alt="">
                     </div>       
@@ -57,7 +96,7 @@
                         <h4 id="Jeftekst" class="persoonstekst">Als top webontwikkelaar in ons ICT-bedrijf, mixt Jef zijn technische skills en creativiteit om websites te maken die de standaard in de business omhoog krikken. Met een scherp oog voor de laatste trends en een passie voor vernieuwing, brengt Jef unieke en gebruiksvriendelijke online ervaringen tot leven, waardoor onze klanten zich onderscheiden in de digitale wereld.</h4>
                     </div>
                 </div>
-                <div class="over-container1-1 anim3">
+                <div id="arne" class="over-container1-1 anim3">
                     <div class="over-container1-1-2">
                         <img class="persoonimages" src="images/IMG_1244.jpg" alt="">
                     </div>       
@@ -71,31 +110,24 @@
                     <div class="over-container2-1">
                         <div class="over-container2-2">
                             <div class="over-vakje1">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                      <div class="flip-card-front">
-                                        <img class="over-imgjs" src="images/js-logo.png" alt="">
-                                      </div>
-    
-                                    </div>
-                                  </div>
+                                <button class="none" onclick="openModal(1)"><img class="over-imgjs" src="images/js-logo.png" alt=""></button>
                             </div>
                             <div class="over-vakje1">
-                                <img class="over-img" src="images/CSS3_logo.svg.png" alt="">
+                                <button class="none" onclick="openModal(2)"><img class="over-img" src="images/CSS3_logo.svg.png" alt=""></button>
                             </div>
                         </div>
                         <div class="over-container2-3">
                             <div class="over-vakje2">
-                                <img class="over-img" src="images/f9063048.png" alt="">
+                                <button class="none" onclick="openModal(3)"><img class="over-img" src="images/f9063048.png" alt=""></button>
                             </div>
                         </div>
                     </div>
                     <div class="over-container2-2">
                         <div class="over-vakje1">
-                            <img class="over-img" src="images/fi-snsuxx-php-logo.png" alt="">
+                            <button class="none" onclick="openModal(4)"><img class="over-img" src="images/fi-snsuxx-php-logo.png" alt=""></button>
                         </div>
                         <div class="over-vakje1">
-                            <img class="over-img" src="images/61_sql-database-generic.90b41636a8.png" alt="">
+                            <button class="none" onclick="openModal(5)"><img class="over-img" src="images/61_sql-database-generic.90b41636a8.png" alt=""></button>
                         </div>
                     </div>
                 </div> 
@@ -109,7 +141,7 @@
                 <h3>Qual-IT</h3>
                     <p>Diestestraat 163</p>
                     <p>3000 Leuven</p>
-                    <a target="_blank" href="https://www.google.com/maps/place/Miniemeninstituut/@50.8814123,4.7067479,17z/data=!4m14!1m7!3m6!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!2sMiniemeninstituut!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c!3m5!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c?entry=ttu">routebeschrijving</a>
+                    <a id="route" target="_blank" href="https://www.google.com/maps/place/Miniemeninstituut/@50.8814123,4.7067479,17z/data=!4m14!1m7!3m6!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!2sMiniemeninstituut!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c!3m5!1s0x47c160d3fdfbf33f:0x3860177c2547ac92!8m2!3d50.8814089!4d4.7093228!16s%2Fg%2F120q6_9c?entry=ttu">routebeschrijving</a>
             </div>
             <div class="footer-2">
                 <h3 id="footerTitel">Op maat</h3>

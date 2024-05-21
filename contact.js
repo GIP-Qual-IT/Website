@@ -1,4 +1,18 @@
+//Calls up prefered Language
+storedJsonString = localStorage.getItem("StoredLanguage");
+StoredLanguage = JSON.parse(storedJsonString);
+//If empty page will be in English
+if (StoredLanguage === null) {
+  currentlanguage = "nederlands";
+  changeLanguage(currentlanguage);
+}else {
+  currentlanguage = StoredLanguage;
+  changeLanguage(currentlanguage);
+};
 function changeLanguage(language) {
+
+    currentlanguage = language;
+    localStorage.setItem("StoredLanguage", JSON.stringify(currentlanguage));
     // Navbar
     var navlink1 = document.getElementById('navlink1');
     var navlink2 = document.getElementById('navlink2');
@@ -8,6 +22,7 @@ function changeLanguage(language) {
     var mail = document.getElementById('mail')
     var lang = document.getElementById('lang')
     var contacttitel = document.getElementById('contacttitel')
+    var send = document.getElementById('send')
     
     if (language === 'nederlands') {
         navlink1.textContent = 'Producten';
@@ -17,7 +32,8 @@ function changeLanguage(language) {
         achternaam.placeholder='ACHTERNAAM'
         mail.placeholder='Iets laten weten? Typ het hier.'
         lang.lang = 'nl'
-        contacttitel ='Contacteer ons'
+        contacttitel.textContent ='Contacteer ons'
+        send.value = 'verstuur'
     } else if (language === 'engels') {
         navlink1.textContent = 'Products';
         navlink2.textContent = 'About us';
@@ -26,7 +42,8 @@ function changeLanguage(language) {
         achternaam.placeholder='SURNAME'
         mail.placeholder='Let us know something? Type it here.'
         lang.lang = 'en'
-        contacttitel ='Contact us'
+        contacttitel.textContent ='Contact us'
+        send.value = 'send'
     } else if (language === 'frans') {
         navlink1.textContent = 'Produits';
         navlink2.textContent = 'A propos de nous';
@@ -35,7 +52,8 @@ function changeLanguage(language) {
         achternaam.placeholder='NOM'
         mail.placeholder='Vous souhaitez nous faire part de quelque chose ? Saisissez-le ici.'
         lang.lang = 'fr'
-        contacttitel ='Contactez nous'
+        contacttitel.textContent ='Contactez nous'
+        send.value = 'envoyez'
     }
     // Navbar (vlaggen)
     var navlink3 = document.getElementById('navlink3');

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <main>
+        <section class="matches">
+            <div class="match">
+                <div class="matchtitel">
+                    Laatst gespeelde match
+                </div>
+                <div class="matchgegevens">
+                    <div class="team">
+                        <img class="fototeams" id="fotoThuis" src="" alt="">
+                        <h1 class="titelteams" id="titelThuis"></h1>
+                    </div>
+                    <div class="uitslagen">
+                        <p class="datum" id="datum"></p>
+                        <p class="outcome madimi-one-regular" id="outcome"></p>
+                    </div>
+                    <div class="team">
+                        <h1 class="titelteams" id="titelUit"></h1>
+                        <img class="fototeams" id="fotoUit" src="" alt=""> 
+                    </div>
+                </div>
+            </div>
+            <div class="match">
+                <div class="matchtitel">
+                    Volgende match
+                </div>
+                <div class="matchgegevens">
+                    <div class="matchgegevens">
+                        <div class="team">
+                            <img class="fototeams" id="fotoThuis2" src="" alt="">
+                            <h1 class="titelteams" id="titelThuis2"></h1>
+                        </div>
+                        <div class="uitslagen">
+                            <p class="datum" id="datum1"></p>
+                            <p class="outcome madimi-one-regular" id="datum2"></p>
+                        </div>
+                        <div class="team">
+                            <h1 class="titelteams" id="titelUit2"></h1>
+                            <img class="fototeams" id="fotoUit2" src="" alt=""> 
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+    </main>
+    <script>
+        fetch('https://datalake-prod2018.rbfa.be/graphql?operationName=GetLastPlayedMatch&variables=%7B%22teamId%22%3A%22283190%22%2C%22language%22%3A%22nl%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2218edd7e1b5a15cdd3296c90232e453deb1a8eac80a98cfd10d1963830561fc8d%22%7D%7D')
+            .then(response => response.json())
+            .then(data => {
+                 var store = data.data.lastPlayedMatch
+                    document.getElementById('fotoThuis').src = store.homeTeam.logo;
+                    document.getElementById('titelThuis').textContent = store.homeTeam.name;
+                    document.getElementById('fotoUit').src = store.awayTeam.logo;
+                    document.getElementById('titelUit').textContent = store.awayTeam.name;
+                    document.getElementById('outcome').textContent = store.outcome.homeTeamGoals + " - " + store.outcome.awayTeamGoals;
+                    var inputDate = store.startTime;
+                    var dateObject = new Date(inputDate);
+                    var day = ('0' + dateObject.getDate()).slice(-2);
+                    var month = ('0' + (dateObject.getMonth() + 1)).slice(-2);
+                    var year = dateObject.getFullYear();
+                    var hours = ('0' + dateObject.getHours()).slice(-2);
+                    var minutes = ('0' + dateObject.getMinutes()).slice(-2);
+                    var formattedDate = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes;
+                    document.getElementById('datum').textContent = formattedDate
+            })
+
+
+        fetch('https://datalake-prod2018.rbfa.be/graphql?operationName=GetUpcomingMatch&variables=%7B%22teamId%22%3A%22283190%22%2C%22language%22%3A%22nl%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2282e90ddafc6823e8cc5c5d876073e0e01c261f6844ad8e8bab5b8fd0b17da5e1%22%7D%7D')
+            .then(response => response.json())
+            .then(data => {
+                var store2 = data.data.upcomingMatch
+                    document.getElementById('fotoThuis2').src = store2.homeTeam.logo;
+                    document.getElementById('titelThuis2').textContent = store2.homeTeam.name;
+                    document.getElementById('fotoUit2').src = store2.awayTeam.logo;
+                    document.getElementById('titelUit2').textContent = store2.awayTeam.name;
+                    var inputDate1 = store2.startTime;
+                    var dateObject1 = new Date(inputDate1);
+                    var day1 = ('0' + dateObject1.getDate()).slice(-2);
+                    var month1 = ('0' + (dateObject1.getMonth() + 1)).slice(-2);
+                    var year1 = dateObject1.getFullYear();
+                    var hours1 = ('0' + dateObject1.getHours()).slice(-2);
+                    var minutes1 = ('0' + dateObject1.getMinutes()).slice(-2);
+                    var formattedDate1 = day1 + '/' + month1 + '/' + year1;
+                    var formattedDate2 = hours1 + ':' + minutes1;
+                    document.getElementById('datum1').textContent = formattedDate1
+                    document.getElementById('datum2').textContent = formattedDate2
+            })
+    </script>
+</body>
+</html>

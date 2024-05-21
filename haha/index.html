@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fetch('https://datalake-prod2018.rbfa.be/graphql?operationName=getClub&variables=%7B%22clubId%22%3A%222905%22%2C%22language%22%3A%22nl%22%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%2206c0247013693e2d50cc348462b47640d0c1b61e12e6c0c618534c2d404e4779%22%7D%7D')
+            .then(response => response.json())
+            .then(data => {
+                    document.getElementById('logo').src = data.data.club.logo;
+                    document.getElementById('name').textContent = data.data.club.name;
+            })
+    </script>
+</head>
+<body>
+    <img id="logo" src="" alt="">
+    <p id="name"></p>
+</body>
+</html>
+</body>
+</html>
